@@ -1,5 +1,7 @@
+sudo: required
+
 script:
- - "test/travis.rb"
+ - "travis.rb"
 
 language: sass
 before_install:
