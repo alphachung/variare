@@ -1,5 +1,5 @@
 script:
- - "./travis.rb"
+ - "sass scss/variare.scss variare.css"
 
 language: sass
 before_install:
