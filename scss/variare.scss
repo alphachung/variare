@@ -1,0 +1,38 @@
+#sr-header-area {
+  background: rgba(0,0,0,.5);
+  opacity: .5;
+  border-bottom: 0;
+  color: #fff;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .separator {
+    color: #fff;
+  }
+
+  .sr-list ul.sr-bar {
+    a {
+      color: #fff;
+    }
+    .separator {
+      color: #fff;
+    }
+  }
+
+  .dropdown.srdrop .selected {
+    color: #fff;
+    background: transparent;
+    padding-right: 5px;
+
+    &:after {
+      content: ' [+]';
+    }
+  }
+
+  #sr-more-link {
+    background: rgba(0,0,0,.5);
+    color: #fff;
+  }
+}
