@@ -1,5 +1,5 @@
 script:
- - "travis.rb"
+ - "./travis.rb"
 
 language: sass
 before_install:
