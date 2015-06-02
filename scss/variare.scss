@@ -1,6 +1,6 @@
 $font: 'Helvetica Neue', 'Liberation Sans', 'FreeSans', Arial, sans-serif;
-$theme-color: #00BCD4;
-$accent-color: #FFEB3B;
+$theme-color: #4DBCE9;
+$accent-color: #F2DE5C;
 $header-top-padding: 0px;
 $subreddit-name: true;
 
@@ -196,13 +196,6 @@ a {
       }
     }
 
-    &:nth-child(3), &:nth-child(4) {
-      width: 145px;
-      display: inline-block;
-    }
-    &:nth-child(3) {
-      margin-right: 10px;
-    }
     .titlebox {
       h1 {
         font-family: $font;
@@ -249,4 +242,33 @@ a {
 /*main*/
 .sheets {
   margin-right: 350px;
+}
+
+.content {
+  #siteTable {
+    .thing {
+      .entry {
+        .title {
+          .domain {
+            color: transparent;
+            opacity: 0.5;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            a {
+              color: $theme-color--dark;
+            }
+          }
+        }
+
+        .tagline {
+          a {
+            color: $theme-color--dark;
+          }
+        }
+      }
+    }
+  }
 }
