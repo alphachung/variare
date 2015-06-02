@@ -1,10 +1,22 @@
-$font: Verdana, sans-serif;
-$theme-color: #000;
-$accent-color: #000;
+$font: Arial, sans-serif;
+$theme-color: #cee3f8;
+$accent-color: #5f99cf;
+$header-top-padding: 200px;
+
+/*Calculated Variables, DO NOT MODIFY*/
+$accent-color--dark: darken($accent-color, 30%);
+$accent-color--darker: darken($accent-color, 50%);
+$accent-color--dark--transparent: transparentize($accent-color--dark, 0.5);
+$accent-color--darker--transparent: transparentize($accent-color--darker, 0.5);
+
+/*global*/
+body {
+  font-family: $font;
+}
 
 /*subreddits header bar*/
 #sr-header-area {
-  background: rgba(0,0,0,.5);
+  background: $accent-color--darker--transparent;
   opacity: .5;
   border-bottom: 0;
   color: #fff;
@@ -37,7 +49,12 @@ $accent-color: #000;
   }
 
   #sr-more-link {
-    background: rgba(0,0,0,.5);
+    background: $accent-color--dark;
     color: #fff;
   }
+}
+
+/*header*/
+#header-bottom-left {
+  margin-top: $header-top-padding;
 }

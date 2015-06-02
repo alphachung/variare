@@ -23,4 +23,4 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
-guard 'sass', :input => 'scss', :output => 'css', :style => :compressed, :smart_partials => true
+guard 'sass', :input => 'scss', :output => 'css'
