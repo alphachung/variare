@@ -1,4 +1,4 @@
-$font: Roboto, 'DejaVu Sans Condensed', 'Helvetica Neue', sans-serif;
+$font: 'Helvetica Neue', 'Liberation Sans', 'FreeSans', Arial, sans-serif;
 $theme-color: #00BCD4;
 $accent-color: #FFEB3B;
 $header-top-padding: 0px;
@@ -7,7 +7,7 @@ $subreddit-name: true;
 /*Calculated Variables, DO NOT MODIFY*/
 $theme-color--light: lighten($theme-color, 15%);
 $theme-color--lighter: lighten($theme-color, 20%);
-$theme-color--dark: darken($theme-color, 20%);
+$theme-color--dark: darken($theme-color, 10%);
 $theme-color--darker: darken($theme-color, 50%);
 $theme-color--light--transparent: transparentize($theme-color--light, 0.5);
 $theme-color--dark--transparent: transparentize($theme-color--dark, 0.5);
@@ -165,5 +165,22 @@ a {
 
 /*submit*/
 .morelink {
-  background: #fff;
+  background: $theme-color--dark;
+  border: 0;
+
+  &:hover {
+    background: $theme-color;
+  }
+
+  a {
+    color: $accent-color;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  .nub {
+    display: none;
+  }
 }
