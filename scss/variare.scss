@@ -244,31 +244,25 @@ a {
   margin-right: 350px;
 }
 
-.content {
-  #siteTable {
-    .thing {
-      .entry {
-        .title {
-          .domain {
-            color: transparent;
-            opacity: 0.5;
+.content #siteTable .thing .entry {
+  .title {
+    .domain {
+      color: transparent;
+      opacity: 0.5;
 
-            &:hover {
-              opacity: 1;
-            }
-
-            a {
-              color: $theme-color--dark;
-            }
-          }
-        }
-
-        .tagline {
-          a {
-            color: $theme-color--dark;
-          }
-        }
+      &:hover {
+        opacity: 1;
       }
+
+      a {
+        color: $theme-color--dark;
+      }
+    }
+  }
+
+  .tagline {
+    a {
+      color: $theme-color--dark;
     }
   }
 }
