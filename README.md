@@ -1,6 +1,6 @@
 # Variare Subreddit Theme [![Build Status](https://travis-ci.org/alphachung/variare.svg)](https://travis-ci.org/alphachung/variare)
 
-The goal of this project is create a subreddit CSS theme that is written in SCSS such that it could be easily customized by editing the values of the variables.
+The goal of this project is create a subreddit CSS theme that is written in SCSS such that it could be easily customized by editing the values of the variables. Pull requests are welcomed. 
 
 ##Compiling the CSS
 
