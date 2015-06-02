@@ -7,8 +7,8 @@ $subreddit-name: true;
 /*Calculated Variables, DO NOT MODIFY*/
 $theme-color--light: lighten($theme-color, 15%);
 $theme-color--lighter: lighten($theme-color, 20%);
-$theme-color--dark: darken($theme-color, 10%);
-$theme-color--darker: darken($theme-color, 50%);
+$theme-color--dark: darken($theme-color, 5%);
+$theme-color--darker: darken($theme-color, 30%);
 $theme-color--light--transparent: transparentize($theme-color--light, 0.5);
 $theme-color--dark--transparent: transparentize($theme-color--dark, 0.5);
 $theme-color--darker--transparent: transparentize($theme-color--darker, 0.5);
@@ -147,7 +147,7 @@ a {
   }
 
   #header-bottom-right {
-    background: rgba(0,0,0,.1);
+    background: $theme-color--dark;
     height: 48px;
     padding: 0 20px;
     border-radius: 0;
@@ -164,23 +164,35 @@ a {
 }
 
 /*submit*/
-.morelink {
-  background: $theme-color--dark;
-  border: 0;
-
-  &:hover {
-    background: $theme-color;
-  }
-
-  a {
-    color: $accent-color;
-
-    &:hover {
-      color: $accent-color;
+.side {
+  .spacer {
+    &:nth-child(3), &:nth-child(4) {
+      width: 145px;
+      display: inline-block;
+    }
+    &:nth-child(3) {
+      margin-right: 10px;
     }
   }
 
-  .nub {
-    display: none;
+  .morelink {
+    background: $theme-color--dark;
+    border: 0;
+
+    &:hover {
+      background: $theme-color;
+    }
+
+    a {
+      color: $accent-color;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    .nub {
+      display: none;
+    }
   }
 }
