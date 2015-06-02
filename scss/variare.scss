@@ -1,4 +1,4 @@
-$font: Arial, sans-serif;
+$font: 'DejaVu Sans', Verdana, Tahoma, sans-serif;
 $theme-color: #D5BBA0;
 $accent-color: #54CA0B;
 $header-top-padding: 0px;
@@ -102,10 +102,25 @@ a {
       border: 1px solid $theme-color--dark;
       border-right: 0;
       margin: 3px 0;
+      border-radius: 5px;
 
       li {
         display: inline-block;
         margin: 0;
+
+        &:first-child {
+          a {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+        }
+
+        &:last-child {
+          a {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
 
         a {
           background: $theme-color--light;
