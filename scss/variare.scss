@@ -1,17 +1,28 @@
-$font: 'DejaVu Sans', Verdana, Tahoma, sans-serif;
-$theme-color: #D5BBA0;
-$accent-color: #54CA0B;
+$font: Roboto, 'DejaVu Sans Condensed', 'Helvetica Neue', sans-serif;
+$theme-color: #00BCD4;
+$accent-color: #FFEB3B;
 $header-top-padding: 0px;
+$subreddit-name: true;
 
 /*Calculated Variables, DO NOT MODIFY*/
 $theme-color--light: lighten($theme-color, 15%);
-$theme-color--lighter: lighten($theme-color, 30%);
-$theme-color--dark: darken($theme-color, 30%);
+$theme-color--lighter: lighten($theme-color, 20%);
+$theme-color--dark: darken($theme-color, 20%);
 $theme-color--darker: darken($theme-color, 50%);
+$theme-color--light--transparent: transparentize($theme-color--light, 0.5);
 $theme-color--dark--transparent: transparentize($theme-color--dark, 0.5);
 $theme-color--darker--transparent: transparentize($theme-color--darker, 0.5);
+$theme-color--transparent: transparentize($theme-color, 0.5);
 
 $header-item-font-size: 1.2em;
+
+@mixin subreddit-name-display($subreddit-name) {
+  @if $subreddit-name {
+    display: inline-block;
+  } @else {
+    display: none;
+  }
+}
 
 /*global*/
 body {
@@ -74,70 +85,61 @@ a {
 /*header*/
 #header {
   background: $theme-color;
-  border-bottom: 1px solid $theme-color--dark;
+  border-bottom: 0;
 
   #header-bottom-left {
     margin-top: $header-top-padding;
+    background: $theme-color--transparent;
+    height: 48px;
 
     #header-img {
       display: inline-block;
     }
 
     .redditname {
-      display: inline-block;
       font-variant: normal;
       margin: 0;
       font-size: $header-item-font-size;
       vertical-align: middle;
 
+      @include subreddit-name-display($subreddit-name);
+
       a {
-        margin: 16px;
+        margin: 22px 16px 10px 16px;
         display: inline-block;
+        color: #fff;
+
+        &:before {
+          content: '/r/';
+        }
       }
     }
 
     ul.tabmenu {
       display: inline-block;
       vertical-align: middle;
-      border: 1px solid $theme-color--dark;
-      border-right: 0;
-      margin: 3px 0;
-      border-radius: 5px;
+      margin: 12px 0 0 0;
 
       li {
         display: inline-block;
         margin: 0;
 
-        &:first-child {
-          a {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-          }
-        }
-
-        &:last-child {
-          a {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-          }
-        }
-
         a {
-          background: $theme-color--light;
           padding: 10px 16px;
           display: inline-block;
           font-size: $header-item-font-size;
-          border-right: 1px solid $theme-color--dark;
+          color: $accent-color;
+          background: transparent;
+          text-transform: uppercase;
 
           &:hover {
-            background: $theme-color--lighter;
+            background: $theme-color--light--transparent;
           }
         }
         &.selected a {
           background: #fff;
-          color: $accent-color;
           border: 0;
-          border-right: 1px solid $theme-color--dark;
+          color: $theme-color--dark;
         }
       }
     }
@@ -145,7 +147,19 @@ a {
   }
 
   #header-bottom-right {
-    background: $theme-color--light;
+    background: rgba(0,0,0,.1);
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 0;
+
+    .user {
+      color: $accent-color;
+    }
+
+    a {
+      color: #fff;
+      line-height: 48px;
+    }
   }
 }
 
