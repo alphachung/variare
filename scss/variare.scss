@@ -163,9 +163,23 @@ a {
   }
 }
 
-/*submit*/
+/*sidebar*/
 .side {
   .spacer {
+    form#search {
+      input[type=text] {
+        text-align: center;
+        font-family: $font;
+        border: 0;
+        border-bottom: 1px solid $theme-color--darker;
+
+        &:focus {
+          text-align: left;
+          border-bottom: 3px solid $theme-color--dark;
+        }
+      }
+    }
+
     &:nth-child(3), &:nth-child(4) {
       width: 145px;
       display: inline-block;
@@ -196,3 +210,5 @@ a {
     }
   }
 }
+
+/*main*/
