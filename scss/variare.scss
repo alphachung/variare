@@ -5,8 +5,8 @@ $header-top-padding: 0px;
 $subreddit-name: true;
 
 /*Calculated Variables, DO NOT MODIFY*/
-$theme-color--light: lighten($theme-color, 15%);
-$theme-color--lighter: lighten($theme-color, 20%);
+$theme-color--light: desaturate(lighten($theme-color, 15%), 50%);
+$theme-color--lighter: desaturate(lighten($theme-color, 20%), 50%);
 $theme-color--dark: darken($theme-color, 5%);
 $theme-color--darker: darken($theme-color, 30%);
 $theme-color--light--transparent: transparentize($theme-color--light, 0.5);
@@ -177,8 +177,8 @@ a {
 .side {
   display: inline-block;
   padding: 10px 20px;
-  margin-right: 0;
-  border-left: 1px solid $theme-color;
+  margin: 10px;
+  border: 1px solid $theme-color--light;
   width: 300px;
 
   .spacer {
@@ -241,7 +241,7 @@ a {
 
 /*main*/
 .sheets {
-  margin-right: 350px;
+  margin-right: 360px;
 }
 
 .content #siteTable .thing .entry {
