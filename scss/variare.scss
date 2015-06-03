@@ -6,7 +6,7 @@ $subreddit-name: true;
 
 /*Calculated Variables, DO NOT MODIFY*/
 $theme-color--light: desaturate(lighten($theme-color, 15%), 50%);
-$theme-color--lighter: desaturate(lighten($theme-color, 20%), 50%);
+$theme-color--lighter: desaturate(lighten($theme-color, 35%), 50%);
 $theme-color--dark: darken($theme-color, 5%);
 $theme-color--darker: darken($theme-color, 30%);
 $theme-color--light--transparent: transparentize($theme-color--light, 0.5);
@@ -27,6 +27,7 @@ $header-item-font-size: 1.2em;
 /*global*/
 body {
   font-family: $font;
+  background: $theme-color--lighter;
 }
 a {
   color: $theme-color--dark;
@@ -137,7 +138,7 @@ a {
           }
         }
         &.selected a {
-          background: #fff;
+          background: $theme-color--lighter;
           border: 0;
           color: $theme-color--dark;
         }
