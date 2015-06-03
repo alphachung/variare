@@ -270,25 +270,17 @@ a {
     border: 1px solid $theme-color--light;
 
     &.stickied {
-      background: $theme-color;
-      color: #fff;
-      border: 1px solid $theme-color--dark;
-
-      .score {
-        background: $theme-color--lighter;
-        height: 20px;
-        width: 20px;
-        border-radius: 20px;
-        line-height: 20px;
-      }
+      background: $accent-color;
+      color: $theme-color--darker;
+      border: 1px solid $theme-color--light;
 
       .entry {
         .tagline, .tagline a, a {
-          color: $theme-color--lighter;
+          color: $theme-color--darker;
         }
 
         .title, .stickied-tagline {
-          color: $accent-color;
+          color: $theme-color--darker;
         }
       }
     }
@@ -297,14 +289,9 @@ a {
       .title {
         .domain {
           color: transparent;
-          opacity: 0.5;
-
-          &:hover {
-            opacity: 1;
-          }
 
           a {
-            color: $theme-color--dark;
+            color: $theme-color--light;
           }
         }
       }
