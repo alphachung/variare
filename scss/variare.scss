@@ -212,11 +212,28 @@ a {
         }
       }
     }
+
+    .linkinfo {
+      border-radius: 0;
+      background: $theme-color--lighter;
+      color: $theme-color--darker;
+      font-family: $font;
+      border: 1px solid $theme-color--light;
+
+      .score {
+        color: $theme-color;
+
+        .number, .word {
+          color: $theme-color--dark;
+        }
+      }
+    }
   }
 
   .morelink {
     background: $theme-color--dark;
-    border: 0;
+    border: 1px solid $theme-color--darker;
+    letter-spacing: 0;
 
     &:hover {
       background: $theme-color;
@@ -253,9 +270,9 @@ a {
     border: 1px solid $theme-color--light;
 
     &.stickied {
-      background: $theme-color--dark;
+      background: $theme-color;
       color: #fff;
-      border: 1px solid $theme-color--darker;
+      border: 1px solid $theme-color--dark;
 
       .score {
         background: $theme-color--lighter;
