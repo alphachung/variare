@@ -200,8 +200,8 @@ a {
     .titlebox {
       h1 {
         font-family: $font;
-        text-align: center;
-        font-size: 20px;
+        text-align: left;
+        font-size: 30px;
 
         a {
           color: $theme-color--dark;
@@ -234,6 +234,9 @@ a {
     background: $theme-color--dark;
     border: 1px solid $theme-color--darker;
     letter-spacing: 0;
+    text-align: left;
+    padding-left: 10px;
+
 
     &:hover {
       background: $theme-color;
@@ -241,6 +244,10 @@ a {
 
     a {
       color: $accent-color;
+
+      &:after {
+        content: ' >';
+      }
 
       &:hover {
         color: $accent-color;
@@ -300,6 +307,14 @@ a {
         a {
           color: $theme-color--dark;
         }
+      }
+
+      .expando .md {
+        border-radius: 0;
+        background: #fff;
+        border: none;
+        border-top: 1px solid $theme-color--light;
+        margin-top: 10px;
       }
     }
   }
