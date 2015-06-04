@@ -277,9 +277,7 @@ a {
     border: 1px solid $theme-color--light;
 
     &.stickied {
-      background: $accent-color;
       color: $theme-color--darker;
-      border: 1px solid $theme-color--light;
 
       .entry {
         .tagline, .tagline a, a {
@@ -287,7 +285,7 @@ a {
         }
 
         .title, .stickied-tagline {
-          color: $theme-color--darker;
+          color: $theme-color--dark;
         }
       }
     }
