@@ -333,3 +333,19 @@ a {
     }
   }
 }
+
+/*comments*/
+.comment {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid $theme-color--light;
+  margin: 10px;
+
+  .comment {
+    border-left-width: 3px;
+  }
+
+  .child {
+    border: 0;
+  }
+}
